@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  frontend-v2:
+    container_name: frontend-v2
+    restart: always
+    build: ./frontend/tdde41-front-end/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend-api-v2
+      - backend-sock-v2
+
+  backend-api-v2:
+    container_name: backend-api-v2
+    restart: always
+    build: ./backend/api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend-sock-v2
+
+  backend-sock-v2:
+    container_name: backend-sock-v2
+    restart: always
+    build: ./backend/socks
+    ports:
+      - "5001:5001"

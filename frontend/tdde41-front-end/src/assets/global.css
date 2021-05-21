@@ -1,0 +1,9 @@
+.md-drawer {
+    width: 230px !important;
+    max-width: calc(100vw - 125px) !important;
+}
+
+.md-app {
+    /* min-height: 350px !important; */
+    height: calc(100vh - 48px);
+}

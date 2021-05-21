@@ -1,0 +1,4 @@
+flask
+flask-socketio
+flask_cors
+gevent
